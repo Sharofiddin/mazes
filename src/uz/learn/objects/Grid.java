@@ -40,7 +40,7 @@ public class Grid{
     @Override
     public String toString(){
        StringBuilder res = new StringBuilder("+");
-       res.append(Stream.generate(() -> "---+").limit(mat.length).collect(Collectors.joining()));
+       res.append(Stream.generate(() -> "---+").limit(columns).collect(Collectors.joining()));
        res.append("\n");
        for(Cell[] rows: mat){
            StringBuilder top  = new StringBuilder("|"); 
